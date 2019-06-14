@@ -27,6 +27,13 @@
 ##########
 # V9-based configs:
 
+ifeq ("$(CONFIG)","Roland")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=gshield
+    endif
+    SETTINGS_FILE="settings_Roland.h"
+endif
+
 ifeq ("$(CONFIG)","ShapeokoDualY")
     ifeq ("$(BOARD)","NONE")
         BOARD=g2v9k
